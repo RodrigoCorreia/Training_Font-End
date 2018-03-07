@@ -124,6 +124,7 @@ header .header-black li a{
 header #logotipo {
 	position: absolute;
 	top: 20px;
+	z-index: 3;
 }
 
 #menu {
@@ -137,6 +138,12 @@ header #logotipo {
 
 #menu li.search {
 	width: 182px;
+	transition-timing-function: cubic-bezier(1,-.91,1.45,1);
+	transition-duration: 1s;
+}
+
+#menu li.search.ativo {
+	width: 300px;
 }
 
 #menu li.search input {
@@ -145,6 +152,10 @@ header #logotipo {
 	border: none;
 	height: 30px;
 	line-height: 30px;
+}
+
+#menu li.search.ativo input {
+	width: 300px;
 }
 
 #menu li.search ::-webkit-input-placeholder {
